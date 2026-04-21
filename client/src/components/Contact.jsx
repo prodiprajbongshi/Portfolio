@@ -390,14 +390,14 @@ const Contact = () => {
           className="pb-6  md:pb-18 mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center"
         >
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025{" "}
+            © 2026
             <a
               href="https://www.linkedin.com/in/prodip-raj-a50818282/"
               target="_blank"
               className="text-white"
             >
               Prodip.Dev
-            </a>{" "}
+            </a> 
             All rights reserved.
           </div>
           <div className="flex items-center gap-6 ">

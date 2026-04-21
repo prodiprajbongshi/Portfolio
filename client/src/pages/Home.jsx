@@ -20,7 +20,6 @@ const Home = () => {
       <Services />
       <WorkProcess />
       <Contact />
-
     </div>
   );
 };
