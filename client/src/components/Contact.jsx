@@ -334,7 +334,7 @@ const Contact = () => {
 
                   <a
                     target="_blank"
-                    href="https://github.com/DevProdipraj/"
+                    href="https://github.com/prodiprajbongshi"
                     className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group"
                   >
                     <div className="w-10 h-10 rounded-full bg-gradient-to-r from-gray-600 to-gray-800 flex items-center justify-center group-hover:rotate-12 transition-transform">
@@ -358,7 +358,7 @@ const Contact = () => {
                   <a
                     target="_blank"
                     className="flex items-center   gap-3 text-gray-300 hover:text-white transition-colors group"
-                    href="https://linkedin.com/in/rajbongshiprodip"
+                    href="https://www.linkedin.com/in/prodip-rajbongshi-a50818282/"
                   >
                     <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 flex items-center justify-center group-hover:rotate-12 transition-transform">
                       <svg

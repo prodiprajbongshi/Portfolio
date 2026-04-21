@@ -72,7 +72,7 @@ const BottomBar = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://github.com/DevProdipraj"
+                    href="https://github.com/prodiprajbongshi"
                     className="px-4 py-3 bg-white/5 backdrop-blur-md rounded-full border border-white/10 hover:border-purple-400/30 transition-all"
                   >
                     <div className="flex items-center gap-2">
@@ -85,7 +85,7 @@ const BottomBar = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/prodip-raj-a50818282/"
+                    href="https://www.linkedin.com/in/prodip-rajbongshi-a50818282/"
                     className="px-4 py-3 bg-white/5 backdrop-blur-md rounded-full border border-white/10 hover:border-purple-400/30 transition-all"
                   >
                     <div className="flex items-center gap-2">
