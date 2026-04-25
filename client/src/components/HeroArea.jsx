@@ -94,7 +94,7 @@ const HeroArea = () => {
             Hire Me
           </a>
           <a
-            href="https://drive.google.com/file/d/1Vm55ebTGfhqk7bSpDgaqEhbYPAsQWqZQ/view?usp=sharing"
+            href="https://drive.google.com/drive/folders/1P0MRfitJ6EHEn7hDMV58uCnbqaYlW7LW?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-x-2 px-6 py-3.5 border border-white/20 text-gray-300 rounded-lg font-medium hover:bg-white/10 transition-all"
