@@ -55,8 +55,14 @@ const HeroArea = () => {
             "Node.js",
             "Tailwind",
             "GSAP",
+            "Shadcn",
+            "Framer Motion",
+            "TanStack Query",
             "Bootstrap",
             "Express.js",
+            "Redux",
+            "JWT",
+            "Figma",
             "MongoDB",
           ].map((skill, index) => (
             <span

@@ -260,6 +260,7 @@ const About = () => {
                   "CSS - 3",
                   "Bootstrap - 5",
                   "Tailwind CSS",
+                  "Shadcn",
                   "GSAP",
                 ].map((tool, idx) => (
                   <li key={idx} className="flex items-center gap-3">
@@ -310,7 +311,7 @@ const About = () => {
                     Full-Stack Developer
                   </h4>
                   <p className="text-sm text-gray-400 mt-1">
-                    1+ years experience
+                    6+ months experience
                   </p>
                   <p className="text-gray-300 mt-2">
                     Building scalable web applications with modern technologies
@@ -334,7 +335,7 @@ const About = () => {
 
           <div ref={resumeBtn} className="  text-center">
             <a
-              href="https://drive.google.com/file/d/1tHRJDr5mr2SrHg2MnoBFiv7uMkQitTOf/view?usp=sharing"
+              href="https://drive.google.com/drive/folders/1P0MRfitJ6EHEn7hDMV58uCnbqaYlW7LW"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl font-medium text-white hover:shadow-lg hover:shadow-purple-500/30 transition-all group"

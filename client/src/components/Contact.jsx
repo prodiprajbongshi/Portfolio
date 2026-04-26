@@ -392,11 +392,11 @@ const Contact = () => {
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
             © 2026
             <a
-              href="https://www.linkedin.com/in/prodip-raj-a50818282/"
+              href="https://www.linkedin.com/in/prodip-rajbongshi-a50818282/"
               target="_blank"
               className="text-white"
             >
-              Prodip.Dev
+              {" "}Prodip.Dev  {" "}
             </a> 
             All rights reserved.
           </div>

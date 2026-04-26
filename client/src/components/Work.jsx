@@ -12,6 +12,7 @@ import project5 from "../assets/projects/techIllution.png";
 import project6 from "../assets/projects/waetherApp.png";
 import project7 from "../assets/projects/watermarkPr.png";
 import project8 from "../assets/projects/nestify.png";
+import Navbar from "./Navbar";
 
 const project = [
   {
@@ -117,9 +118,12 @@ const Work = () => {
   }, []);
 
   return (
-    <div className="py-12 lg:py-36 px-4 sm:px-6 lg:px-8">
+    <div id="work" className="py-12 lg:py-36 px-4 sm:px-6 lg:px-8">
+
+      
+
       {/* Header */}
-      <div className="container mx-auto px-6 max-w-6xl z-10">
+      <div className="container mx-auto px-6 max-w-6xl z-10 ">
         <div className="mb-20 overflow-hidden">
           <h1 className="text-center" ref={sectionHeader}>
             {"WORKS".split("").map((letter, idx) => (
