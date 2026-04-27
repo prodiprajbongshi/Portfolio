@@ -4,14 +4,32 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
+import Navbar from "./Navbar";
 import quickpick from "../assets/projects/Quickpick.png";
 import bdFex from "../assets/projects/bdFex.png";
+
 import imgGenarator from "../assets/projects/imageGanarator.png";
 import sorbojuya from "../assets/projects/surbojuya.png";
 import techillusion from "../assets/projects/techIllution.png";
 import watherApp from "../assets/projects/waetherApp.png";
 import nestify from "../assets/projects/nestify.png";
-import Navbar from "./Navbar";
+
+// un publish project list
+// import  aladdin from "../assets/projects/aladdin.jpg";
+// import amarfoods  from "../assets/projects/amarFoods.jpg";
+// import  blogApplication from "../assets/projects/blogApplication.jpg";
+// import digitalAgency  from "../assets/projects/digitalAgency.jpg";
+// import  jamBox from "../assets/projects/jambox.jpg";
+// import murtAuth  from "../assets/projects/mernAuth.jpg";
+// import  orrien from "../assets/projects/orrien.jpg";
+// import sass  from "../assets/projects/sass.jpg";
+// import  shaninTour from "../assets/projects/shaninTour.jpg";
+// import watermark  from "../assets/projects/watermark.jpg";
+// import greenbd from "../assets/projects/greenBangladesh.jpg";
+// import greenbd from "../assets/projects/marcas.jpg";
+// import greenbd from "../assets/projects/happylown.jpg";
+// import greenbd from "../assets/projects/afcare.jpg";
+
 
 const project = [
   {
