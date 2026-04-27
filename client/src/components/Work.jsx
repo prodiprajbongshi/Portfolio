@@ -4,65 +4,60 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
-import project1 from "../assets/projects/Quickpick.png";
-import project2 from "../assets/projects/bdFex.png";
-import project3 from "../assets/projects/imageGanarator.png";
-import project4 from "../assets/projects/surbojuya.png";
-import project5 from "../assets/projects/techIllution.png";
-import project6 from "../assets/projects/waetherApp.png";
-import project7 from "../assets/projects/watermarkPr.png";
-import project8 from "../assets/projects/nestify.png";
+import quickpick from "../assets/projects/Quickpick.png";
+import bdFex from "../assets/projects/bdFex.png";
+import imgGenarator from "../assets/projects/imageGanarator.png";
+import sorbojuya from "../assets/projects/surbojuya.png";
+import techillusion from "../assets/projects/techIllution.png";
+import watherApp from "../assets/projects/waetherApp.png";
+import nestify from "../assets/projects/nestify.png";
 import Navbar from "./Navbar";
 
 const project = [
   {
-    projectImg: project1,
+    projectImg: quickpick,
     projectLink: "https://quick-pick-eight.vercel.app/",
-    projectRepo: "https://github.com/DevProdipraj/QuickPick",
+    projectRepo: "https://github.com/prodiprajbongshi/QuickPick",
     tag: ["E-Commerce", "Tailwind CSS", "React", "Frontend"],
   },
   {
-    projectImg: project2,
-    projectLink: "https://devprodipraj.github.io/BDfex/",
-    projectRepo: "https://github.com/DevProdipraj/BDfex",
+    projectImg: bdFex,
+    projectLink: "https://prodiprajbongshi.github.io/BDfex/",
+    projectRepo: "https://github.com/prodiprajbongshi/BDfex",
     tag: ["Conference", "HTML5", "CSS3", "Web Design"],
   },
+    
   {
-    projectImg: project3,
-    projectLink: "https://devprodipraj.github.io/img_generator/",
-    projectRepo: "https://github.com/DevProdipraj/img_generator",
+    projectImg: nestify,
+    projectLink: "https://nestify-umber.vercel.app",
+    projectRepo: "https://github.com/prodiprajbongshi/Portfolio",
+    tag: ["Furniture", "Frontend Development", "Next-js", "Tailwind-CSS"],
+  },
+  {
+    projectImg: imgGenarator,
+    projectLink: "https://prodiprajbongshi.github.io/img_generator/",
+    projectRepo: "https://github.com/prodiprajbongshi/img_generator",
     tag: ["Image", "AI", "JavaScript", "Backend"],
   },
   {
-    projectImg: project4,
-    projectLink: "https://devprodipraj.github.io/Sorbujoya/",
-    projectRepo: "https://github.com/DevProdipraj/Sorbujoya",
+    projectImg: sorbojuya,
+    projectLink: "https://prodiprajbongshi.github.io/Sorbujoya/",
+    projectRepo: "https://github.com/prodiprajbongshi/Sorbujoya",
     tag: ["Farmers", "Bootstrap", "Web Design", "Responsive"],
   },
   {
-    projectImg: project5,
-    projectLink: "https://devprodipraj.github.io/techillusionBD/",
-    projectRepo: "https://github.com/DevProdipraj/techillusionBD",
+    projectImg: techillusion,
+    projectLink: "https://prodiprajbongshi.github.io/techillusionBD/",
+    projectRepo: "https://github.com/prodiprajbongshi/techillusionBD",
     tag: ["IT Company", "Backend", "UI/UX", "Frontend"],
   },
   {
-    projectImg: project6,
-    projectLink: "https://devprodipraj.github.io/wather-app/",
-    projectRepo: "https://github.com/DevProdipraj/wather-app",
+    projectImg: watherApp,
+    projectLink: "https://prodiprajbongshi.github.io/wather-app/",
+    projectRepo: "https://github.com/prodiprajbongshi/wather-app",
     tag: ["Weather", "Backend", "API", "Frontend"],
   },
-  {
-    projectImg: project7,
-    projectLink: "https://devprodipraj.github.io/WatermarkPR/",
-    projectRepo: "https://github.com/DevProdipraj/WatermarkPR",
-    tag: ["Agency", "Web Design", "HTML5", "Bootstrap"],
-  },
-  {
-    projectImg: project8,
-    projectLink: "https://nestify-umber.vercel.app",
-    projectRepo: "https://github.com/DevProdipraj/Portfolio",
-    tag: ["Furniture", "Frontend Development", "Next-js", "Tailwind-CSS"],
-  },
+
 ];
 
 const Work = () => {
@@ -194,7 +189,7 @@ const Work = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-colors group"
-            href="https://github.com/DevProdipraj/"
+            href="https://github.com/prodiprajbongshi"
           >
             <svg
               stroke="currentColor"
