@@ -13,23 +13,20 @@ import sorbojuya from "../assets/projects/surbojuya.png";
 import techillusion from "../assets/projects/techIllution.png";
 import watherApp from "../assets/projects/waetherApp.png";
 import nestify from "../assets/projects/nestify.png";
+import aladdin from "../assets/projects/aladdin.jpg";
+import amarfoods from "../assets/projects/amarFoods.jpg";
+import blogApplication from "../assets/projects/blogApplication.jpg";
+import digitalAgency from "../assets/projects/digitalAgency.jpg";
+import jamBox from "../assets/projects/jambox.jpg";
+import mernAuth  from "../assets/projects/mernAuth.jpg";
+import  orrien from "../assets/projects/orrien.jpg";
+import sass  from "../assets/projects/sass.jpg";
+import  shaninTour from "../assets/projects/shaninTour.jpg";
+import watermark  from "../assets/projects/watermark.jpg";
+import greenbd from "../assets/projects/greenBangladesh.jpg";
+import happylown from "../assets/projects/happylown.jpg";
 
-// un publish project list
-// import  aladdin from "../assets/projects/aladdin.jpg";
-// import amarfoods  from "../assets/projects/amarFoods.jpg";
-// import  blogApplication from "../assets/projects/blogApplication.jpg";
-// import digitalAgency  from "../assets/projects/digitalAgency.jpg";
-// import  jamBox from "../assets/projects/jambox.jpg";
-// import murtAuth  from "../assets/projects/mernAuth.jpg";
-// import  orrien from "../assets/projects/orrien.jpg";
-// import sass  from "../assets/projects/sass.jpg";
-// import  shaninTour from "../assets/projects/shaninTour.jpg";
-// import watermark  from "../assets/projects/watermark.jpg";
-// import greenbd from "../assets/projects/greenBangladesh.jpg";
-// import greenbd from "../assets/projects/marcas.jpg";
-// import greenbd from "../assets/projects/happylown.jpg";
-// import greenbd from "../assets/projects/afcare.jpg";
-
+ 
 
 const project = [
   {
@@ -39,12 +36,71 @@ const project = [
     tag: ["E-Commerce", "Tailwind CSS", "React", "Frontend"],
   },
   {
+    projectImg: amarfoods,
+    projectLink: "https://amarfoods.com",
+    tag: ["E-Commerce", "HTML5", "CSS3", "Web Design"],
+  },
+  {
+    projectImg: orrien,
+    projectLink: "https://orrien.com/",
+    projectRepo: "https://github.com/prodiprajbongshi/Orrien",
+    tag: ["Frontend Development", "React", "Tailwind CSS", "JavaScript",  "Web Design"],
+  },
+  {
+    projectImg: watermark,
+    projectLink: "https://watermarkbd.com/",
+    tag: ["Frontend Development", "HTML5", "Bootstrap", "JavaScript",  "Web Design"],
+  },
+  {
+    projectImg: jamBox,
+    projectLink: "https://jambox.games/",
+    projectRepo: "https://github.com/prodiprajbongshi/jambox",
+    tag: ["Games", "HTML5", "CSS3", "JavaScript", "Bootstrap", "Web Design"],
+  },
+  {
     projectImg: bdFex,
     projectLink: "https://prodiprajbongshi.github.io/BDfex/",
     projectRepo: "https://github.com/prodiprajbongshi/BDfex",
     tag: ["Conference", "HTML5", "CSS3", "Web Design"],
   },
-    
+  {
+    projectImg: blogApplication,
+    projectLink: "https://blog-application-nu-two.vercel.app/",
+    projectRepo: "https://github.com/prodiprajbongshi/blogApplication",
+    tag: ["Blog", "React", "Redux", "Tailwind CSS", "Full Stack"],
+  },
+  {
+    projectImg: greenbd,
+    projectLink: "https://www.greenbangladesh.org/",
+    projectRepo: "https://www.greenbangladesh.org/",
+    tag: ["Frontend Development", "HTML5", "Bootstrap", "JavaScript",  "Web Design"],
+  },
+  {
+    projectImg: shaninTour,
+    projectLink: "https://shanin-tour.vercel.app/",
+    projectRepo: "https://github.com/prodiprajbongshi/shanin-tour",
+    tag: ["Tour Website", "HTML", "CSS", "Bootstrap", "Frontend"],
+  },
+  {
+    projectImg: aladdin,
+    projectLink: "https://mern-auth-azvl.vercel.app/",
+    projectRepo: "https://github.com/prodiprajbongshi/mern_auth",
+    tag: ["Game", "React", "Frontend", "Javascript"],
+  },
+  {
+    projectImg: happylown,
+    projectLink: "https://happylown.com/",
+    projectRepo: "https://happylown.com/",
+    tag: ["E Commerce", "Wordpress", "WooCommerce", ],
+  },
+  
+  {
+    projectImg: sass,
+    projectLink: "https://prodiprajbongshi.github.io/BankingApp/",
+    projectRepo: "https://github.com/prodiprajbongshi/BankingApp",
+    tag: ["Game", "React", "Frontend", "Javascript"],
+  },
+  
   {
     projectImg: nestify,
     projectLink: "https://nestify-umber.vercel.app",
@@ -52,10 +108,22 @@ const project = [
     tag: ["Furniture", "Frontend Development", "Next-js", "Tailwind-CSS"],
   },
   {
+    projectImg: mernAuth,
+    projectLink: "https://mern-auth-azvl.vercel.app/",
+    projectRepo: "https://github.com/prodiprajbongshi/mern_auth",
+    tag: ["Full Stack", "Authentication", "React", "Tailwind-CSS", "Node.js", "Express", "MongoDB"],
+  },
+  {
     projectImg: imgGenarator,
     projectLink: "https://prodiprajbongshi.github.io/img_generator/",
     projectRepo: "https://github.com/prodiprajbongshi/img_generator",
     tag: ["Image", "AI", "JavaScript", "Backend"],
+  },
+  {
+    projectImg: digitalAgency,
+    projectLink: "https://prodiprajbongshi.github.io/creativeAgency/",
+    projectRepo: "https://github.com/prodiprajbongshi/creativeAgency",
+    tag: ["Digital Agency", "HTML5", "CSS3", "Web Design"],
   },
   {
     projectImg: sorbojuya,
@@ -75,7 +143,6 @@ const project = [
     projectRepo: "https://github.com/prodiprajbongshi/wather-app",
     tag: ["Weather", "Backend", "API", "Frontend"],
   },
-
 ];
 
 const Work = () => {
@@ -99,7 +166,7 @@ const Work = () => {
       },
     });
 
-     // Project cards animation (bottom to top)
+    // Project cards animation (bottom to top)
     gsap.from(cardsRef.current, {
       y: 100,
       opacity: 0,
@@ -126,15 +193,10 @@ const Work = () => {
         scrub: 2,
       },
     });
-
-   
   }, []);
 
   return (
     <div id="work" className="py-12 lg:py-36 px-4 sm:px-6 lg:px-8">
-
-      
-
       {/* Header */}
       <div className="container mx-auto px-6 max-w-6xl z-10 ">
         <div className="mb-20 overflow-hidden">
@@ -153,7 +215,7 @@ const Work = () => {
       </div>
 
       {/* Cards */}
-      <div className="py-0 px-4 sm:px-8 md:px-16 lg:px-16 xl:px-32">
+      <div className="py-0 px-4 sm:px-8 md:px-16 lg:px-16 xl:px-32 ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {project.map((p, i) => (
             <a key={i} target="_blank" href={p.projectLink}>
