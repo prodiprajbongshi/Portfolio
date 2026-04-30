@@ -29,27 +29,24 @@ import happylown from "../assets/projects/happylown.jpg";
  
 
 const project = [
-  {
-    projectImg: quickpick,
-    projectLink: "https://quick-pick-eight.vercel.app/",
-    projectRepo: "https://github.com/prodiprajbongshi/QuickPick",
-    tag: ["E-Commerce", "Tailwind CSS", "React", "Frontend"],
-  },
-  {
-    projectImg: amarfoods,
-    projectLink: "https://amarfoods.com",
-    tag: ["E-Commerce", "HTML5", "CSS3", "Web Design"],
-  },
-  {
-    projectImg: orrien,
-    projectLink: "https://orrien.com/",
-    projectRepo: "https://github.com/prodiprajbongshi/Orrien",
-    tag: ["Frontend Development", "React", "Tailwind CSS", "JavaScript",  "Web Design"],
+
+   {
+    projectImg: blogApplication,
+    projectLink: "https://blog-application-nu-two.vercel.app/",
+    projectRepo: "https://github.com/prodiprajbongshi/blogApplication",
+    tag: ["Blog", "Full Stack", "React", "Redux", "Tailwind CSS", "Express", "MongoDB", "Node.js" ],
   },
   {
     projectImg: watermark,
     projectLink: "https://watermarkbd.com/",
     tag: ["Frontend Development", "HTML5", "Bootstrap", "JavaScript",  "Web Design"],
+  },
+  
+  {
+    projectImg: orrien,
+    projectLink: "https://orrien.com/",
+    projectRepo: "https://github.com/prodiprajbongshi/Orrien",
+    tag: ["Frontend Development", "React", "Tailwind CSS", "JavaScript", "React Router", "Web Design"],
   },
   {
     projectImg: jamBox,
@@ -58,17 +55,24 @@ const project = [
     tag: ["Games", "HTML5", "CSS3", "JavaScript", "Bootstrap", "Web Design"],
   },
   {
+    projectImg: quickpick,
+    projectLink: "https://quick-pick-eight.vercel.app/",
+    projectRepo: "https://github.com/prodiprajbongshi/QuickPick",
+    tag: ["E-Commerce", "Tailwind CSS", "React", "React Router", "Frontend"],
+  },
+  {
+    projectImg: amarfoods,
+    projectLink: "https://amarfoods.com",
+    tag: ["E-Commerce", "HTML5", "CSS3", "Bootstrap", "Web Design"],
+  },
+  
+  {
     projectImg: bdFex,
     projectLink: "https://prodiprajbongshi.github.io/BDfex/",
     projectRepo: "https://github.com/prodiprajbongshi/BDfex",
     tag: ["Conference", "HTML5", "CSS3", "Web Design"],
   },
-  {
-    projectImg: blogApplication,
-    projectLink: "https://blog-application-nu-two.vercel.app/",
-    projectRepo: "https://github.com/prodiprajbongshi/blogApplication",
-    tag: ["Blog", "React", "Redux", "Tailwind CSS", "Full Stack"],
-  },
+ 
   {
     projectImg: greenbd,
     projectLink: "https://www.greenbangladesh.org/",
@@ -91,7 +95,7 @@ const project = [
     projectImg: happylown,
     projectLink: "https://happylown.com/",
     projectRepo: "https://happylown.com/",
-    tag: ["E Commerce", "Wordpress", "WooCommerce", ],
+    tag: ["E Commerce", "Wordpress", "WooCommerce", "Elementor",  ],
   },
   
   {
@@ -111,7 +115,7 @@ const project = [
     projectImg: mernAuth,
     projectLink: "https://mern-auth-azvl.vercel.app/",
     projectRepo: "https://github.com/prodiprajbongshi/mern_auth",
-    tag: ["Full Stack", "Authentication", "React", "Tailwind-CSS", "Node.js", "Express", "MongoDB"],
+    tag: ["Full Stack", "Authentication", "React", "Tailwind-CSS",  "Node.js", "Express", "MongoDB"],
   },
   {
     projectImg: imgGenarator,
@@ -220,14 +224,14 @@ const Work = () => {
           {project.map((p, i) => (
             <a key={i} target="_blank" href={p.projectLink}>
               <div
-                ref={(el) => (cardsRef.current[i] = el)}
-                className="bg-white/5 p-4 rounded-xl border border-white/10 cursor-pointer"
+                ref={(el) => (cardsRef.current[i] = el)} 
+                className="bg-white/5 md:min-h-[410px]  p-4 rounded-xl border border-white/10 cursor-pointer"
               >
                 <div className="overflow-hidden">
                   <img
                     src={p.projectImg}
                     alt="Project"
-                    className="w-full h-48 object-contain hover:scale-125 transition-all duration-300 rounded-md mb-4"
+                    className="w-full h-60 object-contain hover:scale-125 transition-all duration-300 rounded-md mb-4"
                   />
                 </div>
                 <div className="flex flex-wrap gap-2 mt-4">

@@ -6,14 +6,14 @@ import Work from "../components/Work";
 import Services from "../components/Services";
 import WorkProcess from "../components/WorkProcess";
 import Contact from "../components/Contact";
-import BottomBar from "../components/BottomBar";
+// import BottomBar from "../components/BottomBar";
 import PrivacyPolicy from "./PrivacyPolicy";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
-      <BottomBar />
+      {/* <BottomBar /> */}
       <HeroArea />
       <About />
       <Work />
