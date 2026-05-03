@@ -107,8 +107,8 @@ const project = [
   
   {
     projectImg: nestify,
-    projectLink: "https://nestify-umber.vercel.app",
-    projectRepo: "https://github.com/prodiprajbongshi/Portfolio",
+    projectLink: "https://nestify-coral.vercel.app",
+    projectRepo: "https://github.com/prodiprajbongshi/Nestify",
     tag: ["Furniture", "Frontend Development", "Next-js", "Tailwind-CSS"],
   },
   {
