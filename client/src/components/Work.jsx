@@ -87,8 +87,8 @@ const project = [
   },
   {
     projectImg: aladdin,
-    projectLink: "https://mern-auth-azvl.vercel.app/",
-    projectRepo: "https://github.com/prodiprajbongshi/mern_auth",
+    projectLink: "https://aladdin-game.vercel.app",
+    projectRepo: "https://github.com/prodiprajbongshi/aladdinGame",
     tag: ["Game", "React", "Frontend", "Javascript"],
   },
   {
