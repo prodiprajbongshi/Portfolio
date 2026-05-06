@@ -7,7 +7,6 @@ gsap.registerPlugin(useGSAP);
 import Navbar from "./Navbar";
 import quickpick from "../assets/projects/Quickpick.png";
 import bdFex from "../assets/projects/bdFex.png";
-
 import imgGenarator from "../assets/projects/imageGanarator.png";
 import sorbojuya from "../assets/projects/surbojuya.png";
 import techillusion from "../assets/projects/techIllution.png";
@@ -58,7 +57,7 @@ const project = [
     projectImg: quickpick,
     projectLink: "https://quick-pick-eight.vercel.app/",
     projectRepo: "https://github.com/prodiprajbongshi/QuickPick",
-    tag: ["E-Commerce", "Tailwind CSS", "React", "React Router", "Frontend"],
+    tag: ["E-Commerce", "Tailwind CSS", "React", "Redux", "React Router", "Frontend"],
   },
   {
     projectImg: amarfoods,
