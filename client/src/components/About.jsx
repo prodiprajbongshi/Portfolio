@@ -30,7 +30,6 @@ const About = () => {
         end: "top 50%",
         scrub: 2,
       },
-      
     });
 
     timeLine.from(aboutInfo.current, {
@@ -118,7 +117,7 @@ const About = () => {
         </div>
 
         <div className="container mx-auto px-6 max-w-6xl relative z-10">
-          <div  className="  mb-16 text-center">
+          <div className="  mb-16 text-center">
             <div className="inline-flex items-center gap-3 mb-6">
               <svg
                 stroke="currentColor"
@@ -136,14 +135,28 @@ const About = () => {
                 <circle cx="12" cy="7" r="4"></circle>
               </svg>
               <h2 ref={sectionHeader} className="overflow-hidden">
-                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">A</span>
-                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">B</span>
-                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">O</span>
-                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">U</span>
-                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">T</span>
-                <span className="inline-block  w-4"></span> 
-                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">M</span>
-                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">E</span>
+                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                  A
+                </span>
+                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                  B
+                </span>
+                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                  O
+                </span>
+                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                  U
+                </span>
+                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                  T
+                </span>
+                <span className="inline-block  w-4"></span>
+                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                  M
+                </span>
+                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                  E
+                </span>
               </h2>
             </div>
             <div className="title-divider mx-auto w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
@@ -199,6 +212,7 @@ const About = () => {
                   "Next.js",
                   "Redux",
                   "Redux Toolkit",
+                  "TanStack Query",
                   "Node.js",
                   "Express.js",
                   "MongoDB",
@@ -255,13 +269,14 @@ const About = () => {
               </div>
               <ul className="space-y-3 text-gray-300 lg:mt-12">
                 {[
-                  "Figma (Basic)",
-                  "Html - 5",
-                  "CSS - 3",
-                  "Bootstrap - 5",
+                  "Html",
+                  "CSS",
+                  "Bootstrap",
                   "Tailwind CSS",
                   "Shadcn",
                   "GSAP",
+                  "Framer Motion",
+                  "Figma ",
                 ].map((tool, idx) => (
                   <li key={idx} className="flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>

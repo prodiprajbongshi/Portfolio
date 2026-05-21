@@ -27,126 +27,451 @@ import happylown from "../assets/projects/happylown.jpg";
 
  
 
-const project = [
+// const project = [
 
-   {
+//    {
+//     projectImg: blogApplication,
+//     projectLink: "https://blog-application-nu-two.vercel.app/",
+//     projectRepo: "https://github.com/prodiprajbongshi/blogApplication",
+//     tag: ["Blog", "Full Stack", "React", "Redux", "Tailwind CSS", "Express", "MongoDB", "Node.js" ],
+//   },
+//   {
+//     projectImg: watermark,
+//     projectLink: "https://watermarkbd.com/",
+//     tag: ["Frontend Development", "HTML5", "Bootstrap", "JavaScript",  "Web Design"],
+//   },
+  
+//   {   
+//     projectImg: orrien,
+//     projectLink: "https://orrien.vercel.app",
+//     projectRepo: "https://github.com/prodiprajbongshi/Orrien",
+//     tag: ["Frontend Development", "React", "Tailwind CSS", "JavaScript", "React Router", "Web Design"],
+//   },
+//   {
+//     projectImg: jamBox,
+//     projectLink: "https://jambox.games/",
+//     projectRepo: "https://github.com/prodiprajbongshi/jambox",
+//     tag: ["Games", "HTML5", "CSS3", "JavaScript", "Bootstrap", "Web Design"],
+//   },
+//   {
+//     projectImg: quickpick,
+//     projectLink: "https://quick-pick-eight.vercel.app/",
+//     projectRepo: "https://github.com/prodiprajbongshi/QuickPick",
+//     tag: ["E-Commerce", "Tailwind CSS", "React", "Redux", "React Router", "Frontend"],
+//   },
+//   {
+//     projectImg: amarfoods,
+//     projectLink: "https://amarfoods.com",
+//     tag: ["E-Commerce", "HTML5", "CSS3", "Bootstrap", "Web Design"],
+//   },
+  
+//   {
+//     projectImg: bdFex,
+//     projectLink: "https://prodiprajbongshi.github.io/BDfex/",
+//     projectRepo: "https://github.com/prodiprajbongshi/BDfex",
+//     tag: ["Conference", "HTML5", "CSS3", "Web Design"],
+//   },
+ 
+//   {
+//     projectImg: greenbd,
+//     projectLink: "https://www.greenbangladesh.org/",
+//     projectRepo: "https://www.greenbangladesh.org/",
+//     tag: ["Frontend Development", "HTML5", "Bootstrap", "JavaScript",  "Web Design"],
+//   },
+//   {
+//     projectImg: shaninTour,
+//     projectLink: "https://shanin-tour.vercel.app/",
+//     projectRepo: "https://github.com/prodiprajbongshi/shanin-tour",
+//     tag: ["Tour Website", "HTML", "CSS", "Bootstrap", "Frontend"],
+//   },
+//   {
+//     projectImg: aladdin,
+//     projectLink: "https://aladdin-game.vercel.app",
+//     projectRepo: "https://github.com/prodiprajbongshi/aladdinGame",
+//     tag: ["Game", "React", "Frontend", "Javascript"],
+//   },
+//   {
+//     projectImg: happylown,
+//     projectLink: "https://happylown.com/",
+//     projectRepo: "https://happylown.com/",
+//     tag: ["E Commerce", "Wordpress", "WooCommerce", "Elementor",  ],
+//   },
+  
+//   {
+//     projectImg: sass,
+//     projectLink: "https://prodiprajbongshi.github.io/BankingApp/",
+//     projectRepo: "https://github.com/prodiprajbongshi/BankingApp",
+//     tag: ["Game", "React", "Frontend", "Javascript"],
+//   },
+  
+//   {
+//     projectImg: nestify,
+//     projectLink: "https://nestify-coral.vercel.app",
+//     projectRepo: "https://github.com/prodiprajbongshi/Nestify",
+//     tag: ["Furniture", "Frontend Development", "Next-js", "Tailwind-CSS"],
+//   },
+//   {
+//     projectImg: mernAuth,
+//     projectLink: "https://mern-auth-azvl.vercel.app/",
+//     projectRepo: "https://github.com/prodiprajbongshi/mern_auth",
+//     tag: ["Full Stack", "Authentication", "React", "Tailwind-CSS",  "Node.js", "Express", "MongoDB"],
+//   },
+//   {
+//     projectImg: imgGenarator,
+//     projectLink: "https://prodiprajbongshi.github.io/img_generator/",
+//     projectRepo: "https://github.com/prodiprajbongshi/img_generator",
+//     tag: ["Image", "AI", "JavaScript", "Backend"],
+//   },
+//   {
+//     projectImg: digitalAgency,
+//     projectLink: "https://prodiprajbongshi.github.io/creativeAgency/",
+//     projectRepo: "https://github.com/prodiprajbongshi/creativeAgency",
+//     tag: ["Digital Agency", "HTML5", "CSS3", "Web Design"],
+//   },
+//   {
+//     projectImg: sorbojuya,
+//     projectLink: "https://prodiprajbongshi.github.io/Sorbujoya/",
+//     projectRepo: "https://github.com/prodiprajbongshi/Sorbujoya",
+//     tag: ["Farmers", "Bootstrap", "Web Design", "Responsive"],
+//   },
+//   {
+//     projectImg: techillusion,
+//     projectLink: "https://prodiprajbongshi.github.io/techillusionBD/",
+//     projectRepo: "https://github.com/prodiprajbongshi/techillusionBD",
+//     tag: ["IT Company", "Backend", "UI/UX", "Frontend"],
+//   },
+//   {
+//     projectImg: watherApp,
+//     projectLink: "https://prodiprajbongshi.github.io/wather-app/",
+//     projectRepo: "https://github.com/prodiprajbongshi/wather-app",
+//     tag: ["Weather", "Backend", "API", "Frontend"],
+//   },
+// ];
+
+
+
+const project = [
+  {
     projectImg: blogApplication,
     projectLink: "https://blog-application-nu-two.vercel.app/",
     projectRepo: "https://github.com/prodiprajbongshi/blogApplication",
-    tag: ["Blog", "Full Stack", "React", "Redux", "Tailwind CSS", "Express", "MongoDB", "Node.js" ],
+    tag: [
+      "Blog",
+      "Full Stack",
+      "REST API",
+      "JWT Authentication",
+      "CRUD",
+      "Responsive Design",
+      "MERN Stack",
+      "Frontend",
+      "Backend",
+    ],
   },
+
   {
     projectImg: watermark,
     projectLink: "https://watermarkbd.com/",
-    tag: ["Frontend Development", "HTML5", "Bootstrap", "JavaScript",  "Web Design"],
+    tag: [
+      "Frontend Development",
+      "HTML5",
+      "Bootstrap",
+      "JavaScript",
+      "Web Design",
+      "Responsive Website",
+      "Landing Page",
+      "UI Design",
+      "Cross Browser",
+    ],
   },
-  
+
   {
     projectImg: orrien,
-    projectLink: "https://orrien.com/",
+    projectLink: "https://orrien.vercel.app",
     projectRepo: "https://github.com/prodiprajbongshi/Orrien",
-    tag: ["Frontend Development", "React", "Tailwind CSS", "JavaScript", "React Router", "Web Design"],
+    tag: [
+      "Frontend Development",
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "React Router",
+      "Web Design",
+      "Responsive UI",
+    ],
   },
+
   {
     projectImg: jamBox,
     projectLink: "https://jambox.games/",
     projectRepo: "https://github.com/prodiprajbongshi/jambox",
-    tag: ["Games", "HTML5", "CSS3", "JavaScript", "Bootstrap", "Web Design"],
+    tag: [
+      "Games",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Bootstrap",
+      "Web Design",
+      "Interactive UI",
+      "Responsive Design",
+      "Frontend",
+    ],
   },
+
   {
     projectImg: quickpick,
     projectLink: "https://quick-pick-eight.vercel.app/",
     projectRepo: "https://github.com/prodiprajbongshi/QuickPick",
-    tag: ["E-Commerce", "Tailwind CSS", "React", "Redux", "React Router", "Frontend"],
+    tag: [
+      "E-Commerce",
+      "Tailwind CSS",
+      "React",
+      "Redux",
+      "React Router",
+      "Frontend",
+      "Shopping Cart",
+      "Responsive UI",
+      "Modern Design",
+    ],
   },
+
   {
     projectImg: amarfoods,
     projectLink: "https://amarfoods.com",
-    tag: ["E-Commerce", "HTML5", "CSS3", "Bootstrap", "Web Design"],
+    tag: [
+      "E-Commerce",
+      "HTML5",
+      "CSS3",
+      "Bootstrap",
+      "Web Design",
+      "Business Website",
+      "Responsive Design",
+      "Frontend",
+      "UI Design",
+    ],
   },
-  
+
   {
     projectImg: bdFex,
     projectLink: "https://prodiprajbongshi.github.io/BDfex/",
     projectRepo: "https://github.com/prodiprajbongshi/BDfex",
-    tag: ["Conference", "HTML5", "CSS3", "Web Design"],
+    tag: [
+      "Conference",
+      "HTML5",
+      "CSS3",
+      "Web Design",
+      "Responsive Website",
+      "Event Website",
+      "Landing Page",
+      "Frontend",
+      "UI/UX",
+    ],
   },
- 
+
   {
     projectImg: greenbd,
     projectLink: "https://www.greenbangladesh.org/",
     projectRepo: "https://www.greenbangladesh.org/",
-    tag: ["Frontend Development", "HTML5", "Bootstrap", "JavaScript",  "Web Design"],
+    tag: [
+      "Frontend Development",
+      "HTML5",
+      "Bootstrap",
+      "JavaScript",
+      "Web Design",
+      "Responsive Design",
+      "Organization Website",
+      "Frontend",
+      "UI Design",
+    ],
   },
+
   {
     projectImg: shaninTour,
     projectLink: "https://shanin-tour.vercel.app/",
     projectRepo: "https://github.com/prodiprajbongshi/shanin-tour",
-    tag: ["Tour Website", "HTML", "CSS", "Bootstrap", "Frontend"],
+    tag: [
+      "Tour Website",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Frontend",
+      "Travel Website",
+      "Responsive Design",
+      "Landing Page",
+      "Tourism",
+    ],
   },
+
   {
     projectImg: aladdin,
     projectLink: "https://aladdin-game.vercel.app",
     projectRepo: "https://github.com/prodiprajbongshi/aladdinGame",
-    tag: ["Game", "React", "Frontend", "Javascript"],
+    tag: [
+      "Game",
+      "React",
+      "Frontend",
+      "JavaScript",
+      "Interactive UI",
+      "Browser Game",
+      "Responsive Design",
+      "Fun Project",
+    ],
   },
+
   {
     projectImg: happylown,
     projectLink: "https://happylown.com/",
     projectRepo: "https://happylown.com/",
-    tag: ["E Commerce", "Wordpress", "WooCommerce", "Elementor",  ],
+    tag: [
+      "E Commerce",
+      "WordPress",
+      "WooCommerce",
+      "Elementor",
+      "Online Store",
+      "CMS",
+      "Responsive Design",
+      "Business Website",
+    ],
   },
-  
+
   {
     projectImg: sass,
     projectLink: "https://prodiprajbongshi.github.io/BankingApp/",
     projectRepo: "https://github.com/prodiprajbongshi/BankingApp",
-    tag: ["Game", "React", "Frontend", "Javascript"],
+    tag: [
+      "SASS",
+      "React",
+      "Frontend",
+      "JavaScript",
+      "Finance App",
+      "Responsive UI",
+      "Modern Design",
+    ],
   },
-  
+
   {
     projectImg: nestify,
     projectLink: "https://nestify-coral.vercel.app",
     projectRepo: "https://github.com/prodiprajbongshi/Nestify",
-    tag: ["Furniture", "Frontend Development", "Next-js", "Tailwind-CSS"],
+    tag: [
+      "Furniture",
+      "Frontend Development",
+      "Next.js",
+      "Tailwind CSS",
+      "E-Commerce",
+      "Responsive Design",
+      "Modern UI",
+      "Product Showcase",
+      "Frontend",
+      "UI/UX",
+    ],
   },
+
   {
     projectImg: mernAuth,
     projectLink: "https://mern-auth-azvl.vercel.app/",
     projectRepo: "https://github.com/prodiprajbongshi/mern_auth",
-    tag: ["Full Stack", "Authentication", "React", "Tailwind-CSS",  "Node.js", "Express", "MongoDB"],
+    tag: [
+      "Full Stack",
+      "Authentication",
+      "Password Reset",
+      "JWT",
+      "MERN Stack",
+      "REST API",
+      "Secure Login",
+      "Backend",
+      "Frontend",
+    ],
   },
+
   {
     projectImg: imgGenarator,
     projectLink: "https://prodiprajbongshi.github.io/img_generator/",
     projectRepo: "https://github.com/prodiprajbongshi/img_generator",
-    tag: ["Image", "AI", "JavaScript", "Backend"],
+    tag: [
+      "Image",
+      "AI",
+      "JavaScript",
+      "Backend",
+      "API Integration",
+      "Image Generator",
+      "Responsive UI",
+      "Frontend",
+      "Creative Tool",
+    ],
   },
+
   {
     projectImg: digitalAgency,
     projectLink: "https://prodiprajbongshi.github.io/creativeAgency/",
     projectRepo: "https://github.com/prodiprajbongshi/creativeAgency",
-    tag: ["Digital Agency", "HTML5", "CSS3", "Web Design"],
+    tag: [
+      "Digital Agency",
+      "Web Design",
+      "Agency Website",
+      "Responsive Design",
+      "Landing Page",
+      "Frontend",
+    ],
   },
+
   {
     projectImg: sorbojuya,
     projectLink: "https://prodiprajbongshi.github.io/Sorbujoya/",
     projectRepo: "https://github.com/prodiprajbongshi/Sorbujoya",
-    tag: ["Farmers", "Bootstrap", "Web Design", "Responsive"],
+    tag: [
+      "Web Design",
+      "Responsive",
+      "Agriculture",
+      "Frontend",
+      "NGO Website",
+      "Landing Page",
+      "UI Design",
+    ],
   },
+
   {
     projectImg: techillusion,
     projectLink: "https://prodiprajbongshi.github.io/techillusionBD/",
     projectRepo: "https://github.com/prodiprajbongshi/techillusionBD",
-    tag: ["IT Company", "Backend", "UI/UX", "Frontend"],
+    tag: [
+      "IT Company",
+      "Frontend",
+      "Corporate Website",
+      "Responsive Design",
+      "Business Website",
+      "Modern UI",
+      "Web Development",
+    ],
   },
+
   {
     projectImg: watherApp,
     projectLink: "https://prodiprajbongshi.github.io/wather-app/",
     projectRepo: "https://github.com/prodiprajbongshi/wather-app",
-    tag: ["Weather", "Backend", "API", "Frontend"],
+    tag: [
+      "Weather",
+      "Backend",
+      "API",
+      "Frontend",
+      "JavaScript",
+      "Weather API",
+      "Responsive Design",
+      "Real Time Data",
+      "Web App",
+      "Interactive UI",
+    ],
   },
 ];
+
+
+
+
+
+
+
+
+
+
+
 
 const Work = () => {
   const sectionHeader = useRef();
@@ -224,7 +549,7 @@ const Work = () => {
             <a key={i} target="_blank" href={p.projectLink}>
               <div
                 ref={(el) => (cardsRef.current[i] = el)} 
-                className="bg-white/5 md:min-h-[410px]  p-4 rounded-xl border border-white/10 cursor-pointer"
+                className="bg-white/5 md:min-h-[470px]  p-4 rounded-xl border border-white/10 cursor-pointer"
               >
                 <div className="overflow-hidden">
                   <img
@@ -243,7 +568,7 @@ const Work = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex justify-between mt-4">
+                <div className="flex justify-between mt-6 pt-4 border-t border-white/10">
                   <a
                     href={p.projectLink}
                     target="_blank"
