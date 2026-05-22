@@ -76,10 +76,10 @@ const HeroArea = () => {
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-x-6">
+        <div className="flex flex-row items-center justify-center lg:justify-start gap-4 sm:gap-x-6">
           <a
             href="#contact"
-            className="w-full sm:w-auto text-white flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/30 transition-all"
+            className="sm:w-auto text-white flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/30 transition-all"
             aria-label="Hire Prodip for your project"
           >
             <svg
