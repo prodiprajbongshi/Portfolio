@@ -215,12 +215,7 @@ const Contact = () => {
                     >
                       Want to collaborate
                     </option>
-                    <option
-                      className="bg-[#0f172a] text-white"
-                      value="feedback"
-                    >
-                      Feedback about portfolio
-                    </option>
+                
                     <option className="bg-[#0f172a] text-white" value="job">
                       Job opportunity
                     </option>
