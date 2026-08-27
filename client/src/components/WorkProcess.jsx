@@ -18,8 +18,8 @@ const processSteps = [
   {
     number: "02",
     title: "Design",
-    subtitle: "Interfaces & Systems",
-    desc: "Create wireframes, define the visual system, typography hierarchy, color palette, and interaction direction. Every pixel is intentional.",
+    subtitle: "Engineering & Build",
+    desc: "Create intentional wireframes, a cohesive visual system, clear typography hierarchy, color palette, and interaction direction, then build the product using modern technologies like React, Next.js, GSAP, and Tailwind CSS with clean, maintainable, and scalable architecture.",
     keywords: ["Wireframes", "UI System", "Typography", "Color Palette"],
     accentColor: "from-blue-500 to-cyan-500",
     glowColor: "rgba(59, 130, 246, 0.15)",
@@ -28,8 +28,8 @@ const processSteps = [
   {
     number: "03",
     title: "Develop",
-    subtitle: "Engineering & Build",
-    desc: "Build the product using modern frontend technologies — React, Next.js, GSAP, Tailwind CSS — with clean, maintainable, and scalable code architecture.",
+    subtitle: "MERN-Powered Backend Development",
+    desc: "Build a secure and scalable portfolio backend using the MERN stack, with Node.js, Express.js, and MongoDB powering APIs, data management, authentication, and seamless frontend communication.",
     keywords: ["React", "Next.js", "GSAP", "Node.js", "REST API"],
     accentColor: "from-teal-500 to-green-500",
     glowColor: "rgba(20, 184, 166, 0.15)",
@@ -126,69 +126,70 @@ const WorkProcess = () => {
     }
 
     // ── Each step reveal + active state
-    stepsRef.current.forEach((el, idx) => {
-      if (!el) return;
+    // stepsRef.current.forEach((el, idx) => {
+    //   if (!el) return;
 
-      const numEl = el.querySelector(".step-number");
-      const titleEl = el.querySelector(".step-title");
-      const descEl = el.querySelector(".step-desc");
-      const keywordsEl = el.querySelector(".step-keywords");
-      const dotEl = dotsRef.current[idx];
+    //   const numEl = el.querySelector(".step-number");
+    //   const titleEl = el.querySelector(".step-title");
+    //   const descEl = el.querySelector(".step-desc");
+    //   const keywordsEl = el.querySelector(".step-keywords");
+    //   const dotEl = dotsRef.current[idx];
 
-      // Reveal animation
-      if (!prefersReducedMotion) {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: el,
-            start: "top 75%",
-            end: "top 45%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
+    //   // Reveal animation
+    //   if (!prefersReducedMotion) {
+    //     const tl = gsap.timeline({
+    //       scrollTrigger: {
+    //         trigger: el,
+    //         start: "top 75%",
+    //         end: "top 45%",
+    //         toggleActions: "play reverse play reverse",
+    //       },
+    //     });
 
-        tl.from(numEl, { x: -30, opacity: 0, duration: 0.5, ease: "power3.out" })
-          .from(titleEl, { y: 20, opacity: 0, duration: 0.4, ease: "power2.out" }, "-=0.2")
-          .from(descEl, { y: 15, opacity: 0, duration: 0.4, ease: "power2.out" }, "-=0.2")
-          .from(keywordsEl?.children ? Array.from(keywordsEl.children) : [], {
-            y: 10,
-            opacity: 0,
-            duration: 0.3,
-            stagger: 0.05,
-            ease: "power2.out",
-          }, "-=0.1");
-      }
+    //     tl.from(numEl, { x: -30, opacity: 0, duration: 0.5, ease: "power3.out" })
+    //       .from(titleEl, { y: 20, opacity: 0, duration: 0.4, ease: "power2.out" }, "-=0.2")
+    //       .from(descEl, { y: 15, opacity: 0, duration: 0.4, ease: "power2.out" }, "-=0.2")
+    //       .from(keywordsEl?.children ? Array.from(keywordsEl.children) : [], {
+    //         y: 10,
+    //         opacity: 0,
+    //         duration: 0.3,
+    //         stagger: 0.05,
+    //         ease: "power2.out",
+    //       }, "-=0.1");
+    //   }
 
-      // Active state on scroll
-      ScrollTrigger.create({
-        trigger: el,
-        start: "top 55%",
-        end: "bottom 55%",
-        onEnter: () => {
-          el.classList.add("step-active");
-          if (dotEl) {
-            gsap.to(dotEl, { scale: 1.5, duration: 0.3, ease: "back.out" });
-          }
-        },
-        onLeave: () => {
-          el.classList.remove("step-active");
-          if (dotEl) {
-            gsap.to(dotEl, { scale: 1, duration: 0.3, ease: "power2.out" });
-          }
-        },
-        onEnterBack: () => {
-          el.classList.add("step-active");
-          if (dotEl) {
-            gsap.to(dotEl, { scale: 1.5, duration: 0.3, ease: "back.out" });
-          }
-        },
-        onLeaveBack: () => {
-          el.classList.remove("step-active");
-          if (dotEl) {
-            gsap.to(dotEl, { scale: 1, duration: 0.3, ease: "power2.out" });
-          }
-        },
-      });
-    });
+    //   // Active state on scroll
+    //   ScrollTrigger.create({
+    //     trigger: el,
+    //     start: "top 30%",
+    //     end: "bottom 0%",
+    //     markers:true,
+    //     onEnter: () => {
+    //       el.classList.add("step-active");
+    //       if (dotEl) {
+    //         gsap.to(dotEl, { scale: 1.5, duration: 0.3, ease: "back.out" });
+    //       }
+    //     },
+    //     onLeave: () => {
+    //       el.classList.remove("step-active");
+    //       if (dotEl) {
+    //         gsap.to(dotEl, { scale: 1, duration: 0.3, ease: "power2.out" });
+    //       }
+    //     },
+    //     onEnterBack: () => {
+    //       el.classList.add("step-active");
+    //       if (dotEl) {
+    //         gsap.to(dotEl, { scale: 1.5, duration: 0.3, ease: "back.out" });
+    //       }
+    //     },
+    //     onLeaveBack: () => {
+    //       el.classList.remove("step-active");
+    //       if (dotEl) {
+    //         gsap.to(dotEl, { scale: 1, duration: 0.3, ease: "power2.out" });
+    //       }
+    //     },
+    //   });
+    // });
 
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());

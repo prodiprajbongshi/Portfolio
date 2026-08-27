@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { FiExternalLink, FiGithub, FiLayers, FiCode, FiGlobe } from "react-icons/fi";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
+ 
 
 // ─── Project Images ──────────────────────────────────────────────────────────
 import blogApplication from "../assets/projects/blogApplication.jpg";
@@ -432,7 +433,8 @@ const ProjectCard = ({ project, index }) => {
 // ─── Main Work Component ──────────────────────────────────────────────────────
 const Work = () => {
   const sectionRef = useRef(null);
-  const headingRef = useRef(null);
+    let timeLine = gsap.timeline();
+
   const [selectedCategory, setSelectedCategory] = useState("All Projects");
 
   const featuredList = useMemo(() => projects.filter((p) => p.featured), []);
@@ -446,27 +448,23 @@ const Work = () => {
     );
   }, [selectedCategory]);
 
-  useGSAP(
-    () => {
-      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReducedMotion) return;
-
-      // Section Header Animation
-      gsap.from(headingRef.current.querySelectorAll(".letter"), {
-        y: 40,
+  const sectionHeader = useRef();
+    useGSAP(() => {
+      timeLine.from(sectionHeader.current.querySelectorAll("span"), {
+        y: 100,
         opacity: 0,
-        duration: 0.6,
-        stagger: 0.05,
-        ease: "power3.out",
+        duration: 0.5,
+        stagger: 0.1,
+        delay: 0.5,
         scrollTrigger: {
-          trigger: headingRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
+          trigger: sectionHeader.current,
+          scroller: "body",
+          // markers: true,
+          start: "top 50%",
+          end: "top 50%",
+          scrub: 2,
         },
-      });
-    },
-    { scope: sectionRef }
-  );
+      })}, []);
 
   return (
     <section id="work" ref={sectionRef} className="py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-[#0a0a1a] relative overflow-hidden">
@@ -485,16 +483,62 @@ const Work = () => {
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-              <h2 ref={headingRef} className="overflow-hidden flex flex-wrap justify-center sm:justify-start">
-                {"PROJECTS".split("").map((letter, idx) => (
-                  <span
-                    key={idx}
-                    className="letter inline-block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-400 text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight"
-                  >
-                    {letter}
-                  </span>
-                ))}
+     
+<div className="  mb-16 text-center">
+            <div className="inline-flex items-center  ">
+         
+                
+              <h2 ref={sectionHeader} className="overflow-hidden">
+                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                  P
+                </span>
+                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                  R
+                </span>
+                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                  O
+                </span>
+                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                  J
+                </span>
+                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                  E
+                </span>
+                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                  C
+                </span>
+                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                  T
+                </span>
+                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                  S
+                </span>
               </h2>
+            </div>
+            
+          </div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               <p className="text-gray-300 text-sm sm:text-base max-w-xl mt-3 leading-relaxed">
                 Explore a showcase of production web applications, full-stack systems, creative UI experiments, and real-world client platforms.
               </p>

@@ -86,13 +86,13 @@ const Navbar = () => {
             <a href="#contact" className="cursor-pointer bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-bold">
               Contact
             </a>
-            <a href="#contact">
+            {/* <a href="#contact">
               <input
                 className="px-5 py-2 lg:px-6 lg:py-2.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg font-medium text-white hover:shadow-lg hover:shadow-purple-500/40 transition-all cursor-pointer"
                 type="button"
-                value="Say Hello 👋"
+                value="Say Hello"
               />
-            </a>
+            </a> */}
           </ul>
         </div>
 

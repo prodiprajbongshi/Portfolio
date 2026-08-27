@@ -40,30 +40,32 @@ const HeroArea = () => {
           <span className="text-purple-400 font-bold">
             high-performance web applications
           </span>{" "}
-          that address real-world business challenges. With over 3 years of
+          that address real-world business challenges. With over 3+ years of
           experience, I deliver production-ready solutions using modern
           technologies and best development practices...
         </p>
 
         <div className="flex flex-wrap gap-3 justify-center lg:justify-start my-10">
           {[
-            "HTML-5",
-            "CSS-3",
-            "Next.js",
-            "Javascript",
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "TypeScript",
             "React.js",
-            "Node.js",
-            "Tailwind",
+            "Next.js",
+            "Tailwind CSS",
+            "Shadcn UI",
             "GSAP",
-            "Shadcn",
             "Framer Motion",
-            "TanStack Query",
-            "Bootstrap",
-            "Express.js",
             "Redux",
-            "JWT",
-            "Figma",
+            "TanStack Query",
+            "Node.js",
+            "Express.js",
             "MongoDB",
+            "JWT",
+            "Bootstrap",
+            "Figma",
+            "Photoshop",
           ].map((skill, index) => (
             <span
               key={index}
