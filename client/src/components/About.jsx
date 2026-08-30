@@ -49,49 +49,64 @@ const About = () => {
 
     timeLine.from(devlopmentCard.current, {
       x: -200,
-      duration: 0.5,
+      duration: 0.3,
       opacity: 0,
-      delay: 0.5,
-      ease: "expo.out",
+      delay: 1,
+      // ease: "expo.out",
       scrollTrigger: {
         trigger: sectionHeader.current,
         scroller: "body",
         // markers: true,
         start: "top 0%",
         end: "top 0%",
-        scrub: 3,
+        scrub: 1,
       },
     });
     timeLine.from(designCard.current, {
       x: -400,
-      duration: 0.5,
+      duration: 0.3,
       opacity: 0,
-      delay: 0.5,
-      ease: "expo.out",
+      delay: 1,
+      // ease: "expo.out",
       scrollTrigger: {
         trigger: sectionHeader.current,
         scroller: "body",
         // markers: true,
         start: "top 0%",
         end: "top 0%",
-        scrub: 3,
+        scrub: 1,
       },
     });
     timeLine.from(experianceCard.current, {
       x: -400,
-      duration: 0.5,
+      duration: 0.3,
       opacity: 0,
-      delay: 0.5,
-      ease: "expo.out",
+      delay: 1,
+      // ease: "expo.out",
       scrollTrigger: {
         trigger: sectionHeader.current,
         scroller: "body",
         // markers: true,
         start: "top 0%",
         end: "top 0%",
-        scrub: 3,
+        scrub: 1,
       },
     });
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
 
     timeLine.from(resumeBtn.current, {
       y: 60,
@@ -282,7 +297,7 @@ const About = () => {
                   "Node.js",
                   "Express.js",
                   "MongoDB",
-                  "JWT",
+                  "JSON Web Token (JWT)",
                 ].map((skill, idx) => (
                   <li key={idx} className="flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>

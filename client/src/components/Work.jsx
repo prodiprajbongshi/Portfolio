@@ -2,10 +2,15 @@ import React, { useState, useRef, useMemo } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { FiExternalLink, FiGithub, FiLayers, FiCode, FiGlobe } from "react-icons/fi";
+import {
+  FiExternalLink,
+  FiGithub,
+  FiLayers,
+  FiCode,
+  FiGlobe,
+} from "react-icons/fi";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
- 
 
 // ─── Project Images ──────────────────────────────────────────────────────────
 import blogApplication from "../assets/projects/blogApplication.jpg";
@@ -35,40 +40,66 @@ const projects = [
     projectName: "Blog Application",
     category: "Full Stack",
     projectImg: blogApplication,
-    projectDesc: "Full-stack MERN blogging platform with RESTful APIs, JWT authentication, rich Markdown editing, and responsive UI.",
+    projectDesc:
+      "Full-stack MERN blogging platform with RESTful APIs, JWT authentication, rich Markdown editing, and responsive UI.",
     projectLink: "https://blog-application-nu-two.vercel.app/",
     projectRepo: "https://github.com/prodiprajbongshi/blogApplication",
     featured: true,
-    tag: ["MERN Stack", "React", "Redux", "REST API", "JWT Auth", "MongoDB", "Node.js", "Express"],
+    tag: [
+      "MERN Stack",
+      "React",
+      "Redux",
+      "REST API",
+      "JWT Auth",
+      "MongoDB",
+      "Node.js",
+      "Express",
+    ],
   },
   {
     id: 2,
     projectName: "QuickPick Store",
     category: "E-Commerce",
     projectImg: quickpick,
-    projectDesc: "Modern e-commerce platform built with React & Redux Toolkit, featuring interactive shopping cart, instant search & filter.",
+    projectDesc:
+      "Modern e-commerce platform built with React & Redux Toolkit, featuring interactive shopping cart, instant search & filter.",
     projectLink: "https://quick-pick-eight.vercel.app/",
     projectRepo: "https://github.com/prodiprajbongshi/QuickPick",
     featured: true,
-    tag: ["React", "Redux", "Tailwind CSS", "E-Commerce", "React Router", "Cart State"],
+    tag: [
+      "React",
+      "Redux",
+      "Tailwind CSS",
+      "E-Commerce",
+      "React Router",
+      "Cart State",
+    ],
   },
   {
     id: 3,
     projectName: "Nestify Furniture",
     category: "React & Next.js",
     projectImg: nestify,
-    projectDesc: "High-end furniture showcase built with Next.js & Tailwind CSS with sleek catalog views and smooth micro-interactions.",
+    projectDesc:
+      "High-end furniture showcase built with Next.js & Tailwind CSS with sleek catalog views and smooth micro-interactions.",
     projectLink: "https://nestify-coral.vercel.app",
     projectRepo: "https://github.com/prodiprajbongshi/Nestify",
     featured: false,
-    tag: ["Next.js", "Tailwind CSS", "Modern UI", "Product Showcase", "Frontend"],
+    tag: [
+      "Next.js",
+      "Tailwind CSS",
+      "Modern UI",
+      "Product Showcase",
+      "Frontend",
+    ],
   },
   {
     id: 4,
     projectName: "MERN Auth System",
     category: "Full Stack",
     projectImg: mernAuth,
-    projectDesc: "Production-ready authentication system with password reset tokens, JWT cookies, MongoDB, and modern validation.",
+    projectDesc:
+      "Production-ready authentication system with password reset tokens, JWT cookies, MongoDB, and modern validation.",
     projectLink: "https://mern-auth-azvl.vercel.app/",
     projectRepo: "https://github.com/prodiprajbongshi/mern_auth",
     featured: false,
@@ -79,7 +110,8 @@ const projects = [
     projectName: "Live Weather App",
     category: "Frontend",
     projectImg: watherApp,
-    projectDesc: "Dynamic weather forecasting web app featuring real-time API integrations, auto-location detection, and custom forecast visuals.",
+    projectDesc:
+      "Dynamic weather forecasting web app featuring real-time API integrations, auto-location detection, and custom forecast visuals.",
     projectLink: "https://prodiprajbongshi.github.io/wather-app/",
     projectRepo: "https://github.com/prodiprajbongshi/wather-app",
     featured: false,
@@ -90,18 +122,26 @@ const projects = [
     projectName: "AI Image Generator",
     category: "Frontend",
     projectImg: imgGenarator,
-    projectDesc: "AI generative art application utilizing text-to-image AI APIs, high-res download triggers, and historical query cache.",
+    projectDesc:
+      "AI generative art application utilizing text-to-image AI APIs, high-res download triggers, and historical query cache.",
     projectLink: "https://prodiprajbongshi.github.io/img_generator/",
     projectRepo: "https://github.com/prodiprajbongshi/img_generator",
     featured: false,
-    tag: ["AI Integration", "JavaScript", "REST API", "Creative UI", "Frontend"],
+    tag: [
+      "AI Integration",
+      "JavaScript",
+      "REST API",
+      "Creative UI",
+      "Frontend",
+    ],
   },
   {
     id: 7,
     projectName: "Watermark BD",
     category: "Frontend",
     projectImg: watermark,
-    projectDesc: "Corporate business agency website with pixel-perfect responsive layout, cross-browser compatibility, and fast load times.",
+    projectDesc:
+      "Corporate business agency website with pixel-perfect responsive layout, cross-browser compatibility, and fast load times.",
     projectLink: "https://watermarkbd.com/",
     featured: false,
     tag: ["HTML5", "Bootstrap 5", "JavaScript", "Business Landing", "UI/UX"],
@@ -111,18 +151,26 @@ const projects = [
     projectName: "Orrien Portfolio UI",
     category: "React & Next.js",
     projectImg: orrien,
-    projectDesc: "Ultra-clean modern React website styled with Tailwind CSS, smooth route transitions, and responsive layout.",
+    projectDesc:
+      "Ultra-clean modern React website styled with Tailwind CSS, smooth route transitions, and responsive layout.",
     projectLink: "https://orrien.vercel.app",
     projectRepo: "https://github.com/prodiprajbongshi/Orrien",
     featured: false,
-    tag: ["React", "Tailwind CSS", "React Router", "Responsive UI", "Web Design"],
+    tag: [
+      "React",
+      "Tailwind CSS",
+      "React Router",
+      "Responsive UI",
+      "Web Design",
+    ],
   },
   {
     id: 9,
     projectName: "JamBox Games",
     category: "Games",
     projectImg: jamBox,
-    projectDesc: "Interactive gaming hub featuring custom animations, responsive game grid cards, and mobile-friendly controls.",
+    projectDesc:
+      "Interactive gaming hub featuring custom animations, responsive game grid cards, and mobile-friendly controls.",
     projectLink: "https://jambox.games/",
     projectRepo: "https://github.com/prodiprajbongshi/jambox",
     featured: false,
@@ -133,7 +181,8 @@ const projects = [
     projectName: "Amar Foods",
     category: "E-Commerce",
     projectImg: amarfoods,
-    projectDesc: "Online food and restaurant brand landing platform with product menus, customer review showcases, and contact flows.",
+    projectDesc:
+      "Online food and restaurant brand landing platform with product menus, customer review showcases, and contact flows.",
     projectLink: "https://amarfoods.com",
     featured: false,
     tag: ["E-Commerce", "HTML5", "Bootstrap", "Food Brand", "Web Design"],
@@ -143,7 +192,8 @@ const projects = [
     projectName: "BD Fex Conference",
     category: "Frontend",
     projectImg: bdFex,
-    projectDesc: "International conference & summit event landing page with speaker schedule timelines and ticket booking forms.",
+    projectDesc:
+      "International conference & summit event landing page with speaker schedule timelines and ticket booking forms.",
     projectLink: "https://prodiprajbongshi.github.io/BDfex/",
     projectRepo: "https://github.com/prodiprajbongshi/BDfex",
     featured: false,
@@ -154,7 +204,8 @@ const projects = [
     projectName: "Green Bangladesh",
     category: "Frontend",
     projectImg: greenbd,
-    projectDesc: "Environmental nonprofit organization portal featuring mission highlights, donation calls-to-action, and volunteer forms.",
+    projectDesc:
+      "Environmental nonprofit organization portal featuring mission highlights, donation calls-to-action, and volunteer forms.",
     projectLink: "https://www.greenbangladesh.org/",
     projectRepo: "https://www.greenbangladesh.org/",
     featured: false,
@@ -165,7 +216,8 @@ const projects = [
     projectName: "Shanin Tour & Travel",
     category: "Frontend",
     projectImg: shaninTour,
-    projectDesc: "Tourism and destination agency platform featuring holiday packages, travel itineraries, and responsive booking layouts.",
+    projectDesc:
+      "Tourism and destination agency platform featuring holiday packages, travel itineraries, and responsive booking layouts.",
     projectLink: "https://shanin-tour.vercel.app/",
     projectRepo: "https://github.com/prodiprajbongshi/shanin-tour",
     featured: false,
@@ -176,18 +228,26 @@ const projects = [
     projectName: "Aladdin Adventure Game",
     category: "Games",
     projectImg: aladdin,
-    projectDesc: "Interactive nostalgic browser game developed in React with collision detection, score tracking, and custom game sound effects.",
+    projectDesc:
+      "Interactive nostalgic browser game developed in React with collision detection, score tracking, and custom game sound effects.",
     projectLink: "https://aladdin-game.vercel.app",
     projectRepo: "https://github.com/prodiprajbongshi/aladdinGame",
     featured: false,
-    tag: ["Browser Game", "React", "JavaScript", "Game Logic", "Interactive UI"],
+    tag: [
+      "Browser Game",
+      "React",
+      "JavaScript",
+      "Game Logic",
+      "Interactive UI",
+    ],
   },
   {
     id: 15,
     projectName: "Happy Lown Store",
     category: "E-Commerce",
     projectImg: happylown,
-    projectDesc: "Full-fledged WordPress WooCommerce e-commerce site with product catalogue, checkout gateway, and Elementor custom design.",
+    projectDesc:
+      "Full-fledged WordPress WooCommerce e-commerce site with product catalogue, checkout gateway, and Elementor custom design.",
     projectLink: "https://happylown.com/",
     projectRepo: "https://happylown.com/",
     featured: false,
@@ -198,7 +258,8 @@ const projects = [
     projectName: "Banking App UI",
     category: "Frontend",
     projectImg: sass,
-    projectDesc: "Finance dashboard application featuring account balance analytics, modular SCSS architecture, and transaction history.",
+    projectDesc:
+      "Finance dashboard application featuring account balance analytics, modular SCSS architecture, and transaction history.",
     projectLink: "https://prodiprajbongshi.github.io/BankingApp/",
     projectRepo: "https://github.com/prodiprajbongshi/BankingApp",
     featured: false,
@@ -209,7 +270,8 @@ const projects = [
     projectName: "Creative Agency Hub",
     category: "Frontend",
     projectImg: digitalAgency,
-    projectDesc: "Bold digital design agency website with high-contrast typography, interactive service showcases, and portfolio galleries.",
+    projectDesc:
+      "Bold digital design agency website with high-contrast typography, interactive service showcases, and portfolio galleries.",
     projectLink: "https://prodiprajbongshi.github.io/creativeAgency/",
     projectRepo: "https://github.com/prodiprajbongshi/creativeAgency",
     featured: false,
@@ -220,7 +282,8 @@ const projects = [
     projectName: "Sorbujoya Agriculture",
     category: "Frontend",
     projectImg: sorbojuya,
-    projectDesc: "Agritech and farming community website designed for high accessibility, farmer support resources, and responsive layout.",
+    projectDesc:
+      "Agritech and farming community website designed for high accessibility, farmer support resources, and responsive layout.",
     projectLink: "https://prodiprajbongshi.github.io/Sorbujoya/",
     projectRepo: "https://github.com/prodiprajbongshi/Sorbujoya",
     featured: false,
@@ -231,19 +294,35 @@ const projects = [
     projectName: "Tech Illusion BD",
     category: "Frontend",
     projectImg: techillusion,
-    projectDesc: "Corporate technology enterprise website with comprehensive service matrices, client testimonials, and business contact modules.",
+    projectDesc:
+      "Corporate technology enterprise website with comprehensive service matrices, client testimonials, and business contact modules.",
     projectLink: "https://prodiprajbongshi.github.io/techillusionBD/",
     projectRepo: "https://github.com/prodiprajbongshi/techillusionBD",
     featured: false,
-    tag: ["Corporate IT", "Frontend", "Business Website", "Modern UI", "Web Dev"],
+    tag: [
+      "Corporate IT",
+      "Frontend",
+      "Business Website",
+      "Modern UI",
+      "Web Dev",
+    ],
   },
 ];
 
-const categories = ["All Projects", "Full Stack", "React & Next.js", "E-Commerce", "Frontend", "Games"];
+const categories = [
+  "All Projects",
+  "Full Stack",
+  "React & Next.js",
+  "E-Commerce",
+  "Frontend",
+  "Games",
+];
 
 // ─── Browser Frame Component ──────────────────────────────────────────────────
 const BrowserFrame = ({ img, alt, className = "" }) => (
-  <div className={`rounded-xl overflow-hidden border border-white/10 bg-[#0d0d1f] shadow-2xl ${className}`}>
+  <div
+    className={`rounded-xl overflow-hidden border border-white/10 bg-[#0d0d1f] shadow-2xl ${className}`}
+  >
     {/* Browser chrome bar */}
     <div className="bg-[#151528] flex items-center justify-between px-3 py-2 border-b border-white/10 select-none">
       <div className="flex items-center gap-1.5">
@@ -252,7 +331,9 @@ const BrowserFrame = ({ img, alt, className = "" }) => (
         <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
       </div>
       <div className="bg-white/5 rounded-md px-3 py-0.5 max-w-[200px] w-full text-center">
-        <span className="text-white/40 text-[10px] font-mono tracking-wider truncate block">preview.prodip.dev</span>
+        <span className="text-white/40 text-[10px] font-mono tracking-wider truncate block">
+          preview.prodip.dev
+        </span>
       </div>
       <div className="w-10"></div>
     </div>
@@ -288,7 +369,9 @@ const FeaturedProject = ({ project, index }) => {
               <span className="px-3 py-1 text-xs font-mono font-semibold uppercase tracking-wider rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
                 ⭐ Featured #{num}
               </span>
-              <span className="text-xs font-mono text-gray-400">{project.category}</span>
+              <span className="text-xs font-mono text-gray-400">
+                {project.category}
+              </span>
             </div>
 
             <h3 className="text-2xl sm:text-3xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-300 group-hover:to-blue-300 transition-all duration-300">
@@ -346,7 +429,6 @@ const ProjectCard = ({ project, index }) => {
   const num = String(index + 1).padStart(2, "0");
   return (
     <div className="project-grid-card group relative flex flex-col justify-between bg-[#111224]/80 hover:bg-[#151730] border border-white/10 hover:border-purple-500/40 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-950/30">
-      
       {/* Top Media Preview */}
       <div>
         <div className="relative overflow-hidden aspect-video bg-[#0b0c16] border-b border-white/10">
@@ -409,7 +491,9 @@ const ProjectCard = ({ project, index }) => {
         >
           <FiGlobe className="text-sm" />
           Live Demo
-          <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+          <span className="group-hover:translate-x-0.5 transition-transform">
+            →
+          </span>
         </a>
 
         {project.projectRepo ? (
@@ -423,7 +507,9 @@ const ProjectCard = ({ project, index }) => {
             GitHub
           </a>
         ) : (
-          <span className="text-[11px] text-gray-500 font-mono">Commercial / Client</span>
+          <span className="text-[11px] text-gray-500 font-mono">
+            Commercial / Client
+          </span>
         )}
       </div>
     </div>
@@ -433,7 +519,7 @@ const ProjectCard = ({ project, index }) => {
 // ─── Main Work Component ──────────────────────────────────────────────────────
 const Work = () => {
   const sectionRef = useRef(null);
-    let timeLine = gsap.timeline();
+  let timeLine = gsap.timeline();
 
   const [selectedCategory, setSelectedCategory] = useState("All Projects");
 
@@ -444,36 +530,73 @@ const Work = () => {
       return projects.filter((p) => !p.featured);
     }
     return projects.filter(
-      (p) => !p.featured && (p.category === selectedCategory || p.tag.some((t) => t.toLowerCase().includes(selectedCategory.toLowerCase())))
+      (p) =>
+        !p.featured &&
+        (p.category === selectedCategory ||
+          p.tag.some((t) =>
+            t.toLowerCase().includes(selectedCategory.toLowerCase()),
+          )),
     );
   }, [selectedCategory]);
 
   const sectionHeader = useRef();
-    useGSAP(() => {
-      timeLine.from(sectionHeader.current.querySelectorAll("span"), {
-        y: 100,
+  const featuredSection = useRef(null);
+  useGSAP(() => {
+    timeLine.from(sectionHeader.current.querySelectorAll("span"), {
+      y: 100,
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.1,
+      delay: 0.5,
+      scrollTrigger: {
+        trigger: sectionHeader.current,
+        scroller: "body",
+        // markers: true,
+        start: "top 50%",
+        end: "top 50%",
+        scrub: 2,
+      },
+    });
+
+    const cards = featuredSection.current.querySelectorAll(
+      ".featured-project-card",
+    );
+
+    gsap.from(
+      cards,
+      {
+        y: 120,
         opacity: 0,
-        duration: 0.5,
-        stagger: 0.1,
-        delay: 0.5,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        stagger: 0.2,
+        ease: "power3.out",
+        
         scrollTrigger: {
-          trigger: sectionHeader.current,
-          scroller: "body",
-          // markers: true,
-          start: "top 50%",
-          end: "top 50%",
-          scrub: 2,
+          trigger: featuredSection.current,
+          start: "top 80%",
+          end: "top 40%",
+          marker : true,
+          scrub: 1.2,
         },
-      })}, []);
+      },
+    );
+  }, []);
 
   return (
-    <section id="work" ref={sectionRef} className="py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-[#0a0a1a] relative overflow-hidden">
+    <section
+      id="work"
+      ref={sectionRef}
+      className="py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-[#0a0a1a] relative overflow-hidden"
+    >
       {/* Background glow accents */}
       <div className="absolute top-1/4 -left-48 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-1/3 -right-48 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-
         {/* ── Section Header ── */}
         <div className="mb-16 lg:mb-20 text-center sm:text-left">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-mono uppercase tracking-widest mb-4">
@@ -483,76 +606,57 @@ const Work = () => {
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-     
-<div className="  mb-16 text-center">
-            <div className="inline-flex items-center  ">
-         
-                
-              <h2 ref={sectionHeader} className="overflow-hidden">
-                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
-                  P
-                </span>
-                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
-                  R
-                </span>
-                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
-                  O
-                </span>
-                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
-                  J
-                </span>
-                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
-                  E
-                </span>
-                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
-                  C
-                </span>
-                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
-                  T
-                </span>
-                <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
-                  S
-                </span>
-              </h2>
-            </div>
-            
-          </div>
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+              <div className="  mb-16  ">
+                <div className="inline-flex     ">
+                  <h2 ref={sectionHeader} className="overflow-hidden">
+                    <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                      P
+                    </span>
+                    <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                      R
+                    </span>
+                    <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                      O
+                    </span>
+                    <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                      J
+                    </span>
+                    <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                      E
+                    </span>
+                    <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                      C
+                    </span>
+                    <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                      T
+                    </span>
+                    <span className="inline-block text-4xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">
+                      S
+                    </span>
+                  </h2>
+                </div>
+              </div>
 
               <p className="text-gray-300 text-sm sm:text-base max-w-xl mt-3 leading-relaxed">
-                Explore a showcase of production web applications, full-stack systems, creative UI experiments, and real-world client platforms.
+                Explore a showcase of production web applications, full-stack
+                systems, creative UI experiments, and real-world client
+                platforms.
               </p>
             </div>
 
             <div className="text-center sm:text-right">
-              <span className="text-xs font-mono text-gray-400">Total Showcase:</span>
-              <p className="text-2xl font-bold text-white font-mono">{projects.length} Projects</p>
+              <span className="text-xs font-mono text-gray-400">
+                Total Showcase:
+              </span>
+              <p className="text-2xl font-bold text-white font-mono">
+                {projects.length} Projects
+              </p>
             </div>
           </div>
         </div>
 
         {/* ── 01. Flagship Featured Projects ── */}
-        <div className="mb-16">
+        <div  ref={featuredSection} className="mb-16">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-2.5 h-2.5 rounded-full bg-purple-500 animate-pulse"></div>
             <h3 className="text-sm font-mono font-bold tracking-widest text-purple-300 uppercase">
@@ -577,7 +681,8 @@ const Work = () => {
                 </h3>
               </div>
               <p className="text-gray-300 text-xs sm:text-sm mt-1">
-                Showing {filteredProjects.length} projects across frontend, backend, and full-stack development
+                Showing {filteredProjects.length} projects across frontend,
+                backend, and full-stack development
               </p>
             </div>
 
@@ -607,7 +712,11 @@ const Work = () => {
         {filteredProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-20">
             {filteredProjects.map((p, idx) => (
-              <ProjectCard key={p.id} project={p} index={idx + featuredList.length} />
+              <ProjectCard
+                key={p.id}
+                project={p}
+                index={idx + featuredList.length}
+              />
             ))}
           </div>
         ) : (
@@ -633,11 +742,12 @@ const Work = () => {
             >
               <FiGithub className="text-xl text-purple-400 group-hover:rotate-12 transition-transform duration-300" />
               <span>Explore All Repositories on GitHub</span>
-              <span className="text-purple-400 group-hover:translate-x-1 transition-transform duration-300">→</span>
+              <span className="text-purple-400 group-hover:translate-x-1 transition-transform duration-300">
+                →
+              </span>
             </a>
           </div>
         </div>
-
       </div>
     </section>
   );
