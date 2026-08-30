@@ -19,8 +19,16 @@ const processSteps = [
     number: "02",
     title: "Design",
     subtitle: "Engineering & Build",
-    desc: "Create intentional wireframes, a cohesive visual system, clear typography hierarchy, color palette, and interaction direction, then build the product using modern technologies like React, Next.js, GSAP, and Tailwind CSS with clean, maintainable, and scalable architecture.",
-    keywords: ["Wireframes", "UI System", "Typography", "Color Palette"],
+    desc: "Create intentional wireframes, a cohesive visual system, clear typography hierarchy, color palette, and interaction direction, then build the product using modern technologies like React, Next.js, Typescript, GSAP, and Tailwind CSS with clean, maintainable, and scalable architecture.",
+    keywords: [
+      "Wireframes",
+      "Frontend Development",
+      "UI Design",
+      "Responsive Website",
+      "Modern Interface",
+      "Interactive Experience",
+      "Color Palette",
+    ],
     accentColor: "from-blue-500 to-cyan-500",
     glowColor: "rgba(59, 130, 246, 0.15)",
     dotColor: "#3b82f6",
@@ -29,8 +37,20 @@ const processSteps = [
     number: "03",
     title: "Develop",
     subtitle: "MERN-Powered Backend Development",
-    desc: "Build a secure and scalable portfolio backend using the MERN stack, with Node.js, Express.js, and MongoDB powering APIs, data management, authentication, and seamless frontend communication.",
-    keywords: ["React", "Next.js", "GSAP", "Node.js", "REST API"],
+    desc: "Build a secure and scalable portfolio backend using the MERN stack, with Node.js, Express.js, MongoDB and PostgreSQL powering APIs, data management, authentication, and seamless frontend communication.",
+    keywords: [
+  "Backend Development",
+  "API Development",
+  "Server-Side Development",
+  "Database Management",
+  "System Architecture",
+  "Data Management",
+  "Business Logic",
+  "Scalable Systems",
+  "Secure Applications",
+  "Performance Optimization",
+  "Cloud Integration"
+],
     accentColor: "from-teal-500 to-green-500",
     glowColor: "rgba(20, 184, 166, 0.15)",
     dotColor: "#14b8a6",
@@ -50,7 +70,7 @@ const processSteps = [
     title: "Launch",
     subtitle: "Deploy & Deliver",
     desc: "Deploy to production with CI/CD pipelines, configure hosting and domains, and hand over a fully-tested, production-ready product with documentation.",
-    keywords: ["CI/CD", "Vercel", "DNS", "Testing", "Delivery"],
+    keywords: ["CI/CD", "VPS", "Vercel", "DNS", "Testing", "Delivery"],
     accentColor: "from-pink-500 to-rose-500",
     glowColor: "rgba(236, 72, 153, 0.15)",
     dotColor: "#ec4899",
@@ -77,7 +97,9 @@ const WorkProcess = () => {
   const dotsRef = useRef([]);
 
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
 
     // ── Heading reveal
     gsap.from(headingRef.current.querySelectorAll(".process-letter"), {
@@ -121,7 +143,7 @@ const WorkProcess = () => {
             end: "bottom 40%",
             scrub: 1.5,
           },
-        }
+        },
       );
     }
 
@@ -203,15 +225,16 @@ const WorkProcess = () => {
       className="py-16 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       <div className="max-w-5xl mx-auto">
-
         {/* ── Section Header ── */}
         <div className="mb-20 lg:mb-28">
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-xs font-mono tracking-[0.25em] uppercase text-purple-400">03 / How I Work</span>
+            <span className="text-xs font-mono tracking-[0.25em] uppercase text-purple-400">
+              03 / How I Work
+            </span>
             <div className="h-px flex-1 max-w-16 bg-purple-500/40"></div>
           </div>
           <h2 ref={headingRef} className="overflow-hidden mb-4">
-            {["P","R","O","C","E","S","S"].map((l, i) => (
+            {["P", "R", "O", "C", "E", "S", "S"].map((l, i) => (
               <span
                 key={i}
                 className="process-letter inline-block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight"
@@ -220,14 +243,18 @@ const WorkProcess = () => {
               </span>
             ))}
           </h2>
-          <p ref={subtitleRef} className="text-gray-500 text-sm sm:text-base max-w-md">
-            Every project follows a structured approach — from initial discovery to final delivery — ensuring consistent quality and clear communication.
+          <p
+            ref={subtitleRef}
+            className="text-gray-500 text-sm sm:text-base max-w-md"
+          >
+            Every project follows a structured approach — from initial discovery
+            to final delivery — ensuring consistent quality and clear
+            communication.
           </p>
         </div>
 
         {/* ── Steps ── */}
         <div className="relative">
-
           {/* Vertical progress line */}
           <div
             ref={progressLineRef}
@@ -267,7 +294,9 @@ const WorkProcess = () => {
                   {/* Glow on active */}
                   <div
                     className="absolute -inset-4 rounded-2xl opacity-0 step-glow transition-opacity duration-500"
-                    style={{ background: `radial-gradient(ellipse at 0% 50%, ${step.glowColor}, transparent 70%)` }}
+                    style={{
+                      background: `radial-gradient(ellipse at 0% 50%, ${step.glowColor}, transparent 70%)`,
+                    }}
                     aria-hidden="true"
                   ></div>
 
@@ -286,7 +315,9 @@ const WorkProcess = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className={`step-title text-2xl md:text-3xl font-bold mb-3 text-white/70 step-title-text transition-all duration-500 bg-gradient-to-r ${step.accentColor} bg-clip-text`}>
+                    <h3
+                      className={`step-title text-2xl md:text-3xl font-bold mb-3 text-white/70 step-title-text transition-all duration-500 bg-gradient-to-r ${step.accentColor} bg-clip-text`}
+                    >
                       {step.title}
                     </h3>
 
@@ -321,8 +352,12 @@ const WorkProcess = () => {
         {/* ── Bottom CTA ── */}
         <div className="mt-20 pt-12 border-t border-white/8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
-            <p className="text-white font-semibold text-lg mb-1">Ready to start a project?</p>
-            <p className="text-gray-500 text-sm">Let's discuss your idea and bring it to life.</p>
+            <p className="text-white font-semibold text-lg mb-1">
+              Ready to start a project?
+            </p>
+            <p className="text-gray-500 text-sm">
+              Let's discuss your idea and bring it to life.
+            </p>
           </div>
           <a
             href="#contact"
@@ -330,10 +365,17 @@ const WorkProcess = () => {
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-semibold rounded-xl hover:shadow-lg hover:shadow-purple-500/30 hover:-translate-y-0.5 transition-all duration-300"
           >
             Let's Work Together
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </a>
         </div>
-
       </div>
 
       {/* Step active CSS */}
