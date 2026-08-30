@@ -1,4 +1,4 @@
-import React, { useState, useRef, useMemo } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -11,6 +11,9 @@ import {
 } from "react-icons/fi";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+
+
 
 // ─── Project Images ──────────────────────────────────────────────────────────
 import blogApplication from "../assets/projects/blogApplication.jpg";
@@ -33,7 +36,7 @@ import sorbojuya from "../assets/projects/surbojuya.png";
 import techillusion from "../assets/projects/techIllution.png";
 import watherApp from "../assets/projects/waetherApp.png";
 
-// ─── Complete Project Data (19 Projects) ──────────────────────────────────────
+// ─── Complete Project Data (19 Projects) 
 const projects = [
   {
     id: 1,
@@ -318,12 +321,12 @@ const categories = [
   "Games",
 ];
 
-// ─── Browser Frame Component ──────────────────────────────────────────────────
+ 
 const BrowserFrame = ({ img, alt, className = "" }) => (
   <div
     className={`rounded-xl overflow-hidden border border-white/10 bg-[#0d0d1f] shadow-2xl ${className}`}
   >
-    {/* Browser chrome bar */}
+  
     <div className="bg-[#151528] flex items-center justify-between px-3 py-2 border-b border-white/10 select-none">
       <div className="flex items-center gap-1.5">
         <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
@@ -348,18 +351,56 @@ const BrowserFrame = ({ img, alt, className = "" }) => (
   </div>
 );
 
-// ─── Featured Hero Project Card ───────────────────────────────────────────────
+// ─── Featured Hero Project Card
 const FeaturedProject = ({ project, index }) => {
+  const cardRef = useRef(null);
   const num = String(index + 1).padStart(2, "0");
+
+useEffect(() => {
+  const ctx = gsap.context(() => {
+    gsap.fromTo(
+      cardRef.current,
+      {
+        opacity: 0,
+        y: 100,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.3,
+        delay: 0,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: cardRef.current,
+          start: "top 55%",
+          end: "top 35%",
+          scrub: 0.3,
+
+          // markers: true,
+        },
+      }
+    );
+  }, cardRef);
+
+  return () => ctx.revert();
+}, [index]);
   return (
-    <div className="featured-card group relative bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/10 rounded-2xl p-6 sm:p-8 lg:p-10 mb-12 hover:border-purple-500/40 transition-all duration-500">
+    <div
+      ref={cardRef}
+      className="featured-card group relative bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/10 rounded-2xl p-6 sm:p-8 lg:p-10 mb-12 hover:border-purple-500/40 transition-all duration-500"
+    >
       <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
         {/* Left / Top: Browser Frame Showcase */}
         <div className="lg:col-span-7 relative">
           <div className="absolute -inset-4 bg-gradient-to-tr from-purple-600/20 via-blue-600/10 to-transparent blur-2xl opacity-40 group-hover:opacity-80 transition-opacity duration-500"></div>
-          <BrowserFrame img={project.projectImg} alt={project.projectName} />
+
+          <BrowserFrame
+            img={project.projectImg}
+            alt={project.projectName}
+          />
         </div>
 
         {/* Right / Bottom: Project Information */}
@@ -369,6 +410,7 @@ const FeaturedProject = ({ project, index }) => {
               <span className="px-3 py-1 text-xs font-mono font-semibold uppercase tracking-wider rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
                 ⭐ Featured #{num}
               </span>
+
               <span className="text-xs font-mono text-gray-400">
                 {project.category}
               </span>
@@ -406,6 +448,7 @@ const FeaturedProject = ({ project, index }) => {
               <FiExternalLink className="text-base" />
               Live Demo
             </a>
+
             {project.projectRepo && (
               <a
                 href={project.projectRepo}
@@ -423,8 +466,7 @@ const FeaturedProject = ({ project, index }) => {
     </div>
   );
 };
-
-// ─── Standard Project Card Component ──────────────────────────────────────────
+// ─── Standard Project Card Component  
 const ProjectCard = ({ project, index }) => {
   const num = String(index + 1).padStart(2, "0");
   return (
@@ -516,7 +558,7 @@ const ProjectCard = ({ project, index }) => {
   );
 };
 
-// ─── Main Work Component ──────────────────────────────────────────────────────
+// Main Work Component  
 const Work = () => {
   const sectionRef = useRef(null);
   let timeLine = gsap.timeline();
