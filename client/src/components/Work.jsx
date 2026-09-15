@@ -16,7 +16,7 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 
 // ─── Project Images ──────────────────────────────────────────────────────────
-import blogApplication from "../assets/projects/blogApplication.jpg";
+import blogApplication from "../assets/projects/blogApplication.png";
 import watermark from "../assets/projects/watermark.jpg";
 import orrien from "../assets/projects/orrien.jpg";
 import jamBox from "../assets/projects/jambox.jpg";
@@ -29,7 +29,7 @@ import aladdin from "../assets/projects/aladdin.jpg";
 import happylown from "../assets/projects/happylown.jpg";
 import sass from "../assets/projects/sass.jpg";
 import nestify from "../assets/projects/nestify.png";
-import mernAuth from "../assets/projects/mernAuth.jpg";
+import mernAuth from "../assets/projects/mernAuth.png";
 import imgGenarator from "../assets/projects/imageGanarator.png";
 import digitalAgency from "../assets/projects/digitalAgency.jpg";
 import sorbojuya from "../assets/projects/surbojuya.png";
