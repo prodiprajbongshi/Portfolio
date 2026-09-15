@@ -375,8 +375,8 @@ useEffect(() => {
         ease: "power3.out",
         scrollTrigger: {
           trigger: cardRef.current,
-          start: "top 55%",
-          end: "top 45%",
+          start: "top 45%",
+          end: "top 30%",
           scrub: 0.3,
 
           // markers: true,
