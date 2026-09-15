@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+
 import {
   FiExternalLink,
   FiGithub,
@@ -18,23 +19,24 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 // ─── Project Images ──────────────────────────────────────────────────────────
 import blogApplication from "../assets/projects/blogApplication.png";
 import watermark from "../assets/projects/watermark.jpg";
-import orrien from "../assets/projects/orrien.jpg";
+import orrien from "../assets/projects/orrien.png";
 import jamBox from "../assets/projects/jambox.jpg";
 import quickpick from "../assets/projects/Quickpick.png";
 import amarfoods from "../assets/projects/amarFoods.jpg";
 import bdFex from "../assets/projects/bdFex.png";
 import greenbd from "../assets/projects/greenBangladesh.jpg";
-import shaninTour from "../assets/projects/shaninTour.jpg";
+import shaninTour from "../assets/projects/shahinTour.png";
 import aladdin from "../assets/projects/aladdin.jpg";
 import happylown from "../assets/projects/happylown.jpg";
 import sass from "../assets/projects/sass.jpg";
 import nestify from "../assets/projects/nestify.png";
 import mernAuth from "../assets/projects/mernAuth.png";
-import imgGenarator from "../assets/projects/imageGanarator.png";
+import imgGenarator from "../assets/projects/imageGellery.png";
 import digitalAgency from "../assets/projects/digitalAgency.jpg";
 import sorbojuya from "../assets/projects/surbojuya.png";
 import techillusion from "../assets/projects/techIllution.png";
-import watherApp from "../assets/projects/waetherApp.png";
+import watherApp from "../assets/projects/weatherApp.png";
+ 
 
 // ─── Complete Project Data (19 Projects) 
 const projects = [
@@ -362,21 +364,24 @@ useEffect(() => {
       cardRef.current,
       {
         opacity: 0,
-        y: 100,
+        duration: 0.2,
+        y: 400,
       },
       {
         opacity: 1,
         y: 0,
-        duration: 0.3,
+        duration: 0.2,
         delay: 0,
         ease: "power3.out",
         scrollTrigger: {
           trigger: cardRef.current,
           start: "top 55%",
-          end: "top 35%",
+          end: "top 45%",
           scrub: 0.3,
 
           // markers: true,
+
+          
         },
       }
     );
@@ -477,9 +482,10 @@ const ProjectCard = ({ project, index }) => {
           <img
             src={project.projectImg}
             alt={project.projectName}
-            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-125"
             loading="lazy"
           />
+
           {/* Subtle gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#111224] via-transparent to-black/30 opacity-60 group-hover:opacity-30 transition-opacity"></div>
 
@@ -621,8 +627,8 @@ const Work = () => {
           trigger: featuredSection.current,
           start: "top 80%",
           end: "top 40%",
-          marker : true,
-          scrub: 1.2,
+          // marker : true,
+          scrub: 0.5,
         },
       },
     );
